@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main-style.css">
+    <title>Сайт о вёрстке</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo" style="z-index: 2;">
+        <img src="./images/cactus.png" alt="logo">
+      </div>
+      <h1 class="main_header" style="z-index: 3;">Всё о верстке сайтов</h1>
+      <nav class="navbar" style="z-index: 1;">
+          <li class="link" id="link1">
+            <button class="sidebar">
+              <div id="bar" style="top: 0;"></div>
+              <div id="bar" style="top: 18px;"></div>
+              <div id="bar" style="top: 37px;"></div>
+            </button>
+          </li>
+          <li class="link" id="link2">
+            <a href="#">Новинки веб-дизайна</a>
+          </li>
+          <li class="link" id="link3">
+            <a href="#">Тренды</a>
+          </li>
+          <li class="link" id="link4">
+            <a href="#">Зарплаты</a>
+          </li>
+          <li class="link"  id="link5">
+            <a href="#">О нас</a>
+          </li>
+          <li class="categs">
+            <a href="#">Категории</a>
+          </li>
+      </nav>
+      <div class="menu">
+        <li>
+          <a href="./index.html">Главная страница</a>
+        </li>
+        <li>
+          <a href="#">Избранное</a>
+        </li>
+        <li>
+          <a href="#">Профиль</a>
+        </li>
+        <li>
+          <a href="#">Настройки</a>
+        </li>
+      </div>
+    </header>
+    <main>
+      <ul class="content">
+        <li>
+          <article class="main_article">
+            <img src="./images/1-320x200.jpg" id="article_img" alt="image">
+            <h2 id="article_title">HTML5</h2>
+            <p id="article_text">
+              HTML5 &nbsp; язык для структурирования и представления содержимого всемирной паутины. Это пятая версия HTML.
+            </p>
+            <a class="read_full" href="./article1.html">Читать дальше</a>
+          </article>
+        </li>
+        <li>
+          <article class="main_article">
+            <img src="./images/175-320x200.jpg" id="article_img" alt="image">
+            <h2 id="article_title">Часы. Интересный пример анимации CSS</h2>
+            <p id="article_text">
+              C помощью анимаций CSS можно сделать очень много красивых и интересных вещей, одна из таких- анимированные часы
+            </p>
+            <a href="./article2.html" class="read_full">Читать дальше</a>
+          </article>
+        </li>
+        <li>
+          <article class="main_article">
+            <img src="./images/9-320x200.jpg" id="article_img" alt="image">
+            <h2 id="article_title">Название статьи</h2>
+            <p id="article_text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </p>
+            <a href="#" class="read_full">Читать дальше</a>
+          </article>
+        </li>
+        <hr id="final_hr">
+      </ul>
+    </main>
+    <footer>
+      <p>Юртаев Егор. Мой копирайт. Сайт не имеет полный набор страниц, т.к. на проработку страниц ушло бы очень много времени.</p>
+    </footer>
+  </body>
+</html>

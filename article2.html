@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main-style.css">
+    <link rel="stylesheet" href="./article-style.css">
+    <link rel="stylesheet" href="./clock-style.css">
+    <title>Сайт о вёрстке: Часы. Интересный пример анимации CSS</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo" style="z-index: 2;">
+        <img src="./images/cactus.png" alt="logo">
+      </div>
+      <h1 class="main_header" style="z-index: 3;">Всё о верстке сайтов</h1>
+      <nav class="navbar" style="z-index: 1;">
+          <li class="link" id="link1">
+            <a class="homepage" href="./index.html">
+              <div id="base">
+                <div id="window"></div>
+              </div>
+              <div id="roof"></div>
+            </a>
+          </li>
+          <li class="link" id="link2">
+            <a href="#">Новинки веб-дизайна</a>
+          </li>
+          <li class="link" id="link3">
+            <a href="#">Тренды</a>
+          </li>
+          <li class="link" id="link4">
+            <a href="#">Зарплаты</a>
+          </li>
+          <li class="link"  id="link5">
+            <a href="#">О нас</a>
+          </li>
+          <li class="categs">
+            <a href="#">Категории</a>
+          </li>
+      </nav>
+      <div class="menu">
+        <li>
+          <a href="./index.html">Главная страница</a>
+        </li>
+        <li>
+          <a href="#">Избранное</a>
+        </li>
+        <li>
+          <a href="#">Профиль</a>
+        </li>
+        <li>
+          <a href="#">Настройки</a>
+        </li>
+      </div>
+    </header>
+    <main style="display: grid;">
+        <article class="main_article">
+            <h2 id="article_title">Часы. Интересный пример анимации CSS</h2>
+            <hr id="hr1">
+            <img src="./images/175-620x388.jpg" alt="main-image" id="main_img">
+            <hr id="hr2">
+            <div class="clock">
+                <h1 class="digit-12">12</h1>
+                <h1 class="digit-3">3</h1>
+                <h1 class="digit-6">6</h1>
+                <h1 class="digit-9">9</h1>
+                <div class="hour-hand"></div>
+                <div class="minute-hand"></div>
+                <div class="second-hand"></div>
+                <div class="point"></div>
+            </div>
+            <hr id="hr2">
+            <p id="article_text">
+                C помощью анимаций CSS можно сделать очень много красивых и интересных вещей, одна из таких &mdash; анимированные часы.
+                Код HTML и CSS:
+            </p><br>
+            <p id="article_text">
+                &lt;div class="clock"&gt;<br>
+                &emsp;&lt;h1 class="digit-12"&gt;12&lt;/h1&gt;<br>
+                &emsp;&lt;h1 class="digit-3"&gt;3&lt;/h1&gt;<br>
+                &emsp;&lt;h1 class="digit-6"&gt;6&lt;/h1&gt;<br>
+                &emsp;&lt;h1 class="digit-9"&gt;9&lt;/h1&gt;<br>
+                &emsp;&lt;div class="hour-hand"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="minute-hand"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="second-hand"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="point"&gt;&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </p>
+            <hr id="hr2">
+            <p id="article_text">
+                .clock {<br>
+                &emsp;position: relative;<br>
+                &emsp;width: 600px;<br>
+                &emsp;height: 600px;<br>
+                &emsp;border: 3px solid cyan;<br>
+                &emsp;border-radius: 50%;<br>
+                }<br>
+                .hour-hand,<br>
+                .minute-hand,<br>
+                .second-hand {<br>
+                &emsp;position: absolute;<br>
+                &emsp;left: 49%;<br>
+                &emsp;bottom: 50%;<br>
+                &emsp;transform-origin: bottom;<br>
+                }<br>
+                .hour-hand {<br>
+                &emsp;width: 15px;<br>
+                &emsp;height: 190px;<br>
+                &emsp;background-color: darkcyan;<br>
+                &emsp;animation: ClockHandMove 43200s linear normal infinite;<br>
+                }
+                .minute-hand {<br>
+                &emsp;width: 10px;<br>
+                &emsp;height: 270px;<br>
+                &emsp;background-color: cyan;<br>
+                &emsp;animation: ClockHandMove 3600s linear normal infinite;<br>
+                }<br>
+                .second-hand {<br>
+                &emsp;width: 5px;<br>
+                &emsp;height: 290px;<br>
+                &emsp;background-color: aquamarine;<br>
+                &emsp;animation: ClockHandMove 60s linear normal infinite;<br>
+                }<br>
+                .point {<br>
+                &emsp;position: absolute;<br>
+                &emsp;margin: auto;<br>
+                &emsp;top: 0;<br>
+                &emsp;left: 2px;<br>
+                &emsp;right: 0;<br>
+                &emsp;bottom: 0;<br>
+                &emsp;width: 20px;<br>
+                &emsp;height: 20px;<br>
+                &emsp;border: 3px solid steelblue;<br>
+                &emsp;background-color: steelblue;<br>
+                &emsp;border-radius: 50%;<br>
+                }<br>
+                .digit-12,<br>
+                .digit-3,<br>
+                .digit-6,<br>
+                .digit-9 {<br>
+                &emsp;position: absolute;<br>
+                &emsp;color: steelblue;<br>
+                &emsp;font-size: 54px;<br>
+                &emsp;font-family: sans-serif;<br>
+                &emsp;margin: 0;<br>
+                }<br>
+                .digit-12 {<br>
+                &emsp;top: 2px;<br>
+                &emsp;left: 45%;<br>
+                }<br>
+                .digit-3 {<br>
+                &emsp;top: 45%;<br>
+                &emsp;right: 2px;<br>
+                }<br>
+                .digit-6 {<br>
+                &emsp;left: 47%;<br>
+                &emsp;bottom: 2px;<br>
+                }<br>
+                .digit-9 {<br>
+                &emsp;top: 45%;<br>
+                &emsp;left: 2px;<br>
+                }<br>
+                <br>
+                @keyframes ClockHandMove {<br>
+                &emsp;from {<br>
+                    &emsp;transform: rotateZ(0deg);<br>
+                &emsp;}<br>
+                &emsp;to {<br>
+                    &emsp;transform: rotateZ(360deg);<br>
+                &emsp;}<br>
+                }
+            </p>
+        </article>
+        <hr id="final_hr">
+    </main>
+    <footer>
+      <p>Юртаев Егор. Мой копирайт. Сайт не имеет полный набор страниц, т.к. на проработку страниц ушло бы очень много времени.
+
+        
+      </p>
+    </footer>
+  </body>
+</html>
